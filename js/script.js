@@ -1,11 +1,10 @@
-const hoverMenus = document.querySelectorAll(".hover-menu");
+const menuToggle = document.querySelector(".js-menu-toggle");
+const hoverMenu = document.querySelector(".hover-menu");
 
-hoverMenus.forEach((menu) => {
-  menu.addEventListener("mouseenter", () => {
-    menu.classList.add("open");
-  });
+menuToggle.addEventListener("click", (e) => {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    e.preventDefault();
 
-  menu.addEventListener("mouseleave", () => {
-    menu.classList.remove("open");
-  });
+    hoverMenu.classList.toggle("open");
+  }
 });

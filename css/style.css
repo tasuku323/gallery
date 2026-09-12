@@ -14,6 +14,7 @@ main {
       rgba(0, 0, 0, 0.08) calc(8.333% - 1px),
       rgba(0, 0, 0, 0.08) 8.333%
     );
+    padding-bottom: 512px;
 }
 
 .fv {
@@ -21,11 +22,13 @@ main {
     display: flex;
     width: 100%;
     height: 90vh;
+    align-items: center;
 }
 
 .fv img {
     width: 50%;
     border: 1px solid;
+    height: auto;
 }
 
 
@@ -36,7 +39,7 @@ main {
 }
 
 .container {
-    grid-column: 3 / 11;
+    grid-column: 2 / 10;
     margin: 128px 0 128px 0;
 }
 
@@ -52,6 +55,8 @@ a {
     border-bottom: 1px solid var(--color-text);
     text-align: center;
     font-size: clamp(24px,5vw,64px);
+    line-height: 2.5;
+    margin: 16px 0 0 0;
     transition: var(--transition-base);
 }
 
@@ -93,10 +98,97 @@ small {
     visibility 0.5s;
 }
 
-.hover-menu:hover .accordion {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(12.5%);
+@media (min-width: 768px) {
+  .hover-menu:hover .accordion {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(12.5%);
+  }
 }
 
+@media (max-width: 767px) {
+  .accordion {
+    position: static;
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: none;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      visibility 0.3s;
+  }
+
+  .hover-menu.open .accordion {
+    max-height: 300px;
+
+    opacity: 1;
+    visibility: visible;
+  }
+
+.hover-menu.open > a::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+}
+
+.list-item > a {
+  position: relative;
+}
+
+.list-item > a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+}
+
+.list-item > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+
+  width: 8px;
+  height: 8px;
+
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hover-menu > a {
+  position: relative;
+}
+
+.hover-menu > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+
+  width: 10px;
+  height: 10px;
+
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
