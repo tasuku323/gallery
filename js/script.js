@@ -1,11 +1,11 @@
-const hoverItems = document.querySelectorAll(".js-hover");
+const hoverMenus = document.querySelectorAll(".hover-menu");
 
-hoverItems.forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    item.classList.add("open");
+hoverMenus.forEach((menu) => {
+  menu.addEventListener("mouseenter", () => {
+    menu.classList.add("open");
   });
 
-  item.addEventListener("mouseleave", () => {
-    item.classList.remove("open");
+  menu.addEventListener("mouseleave", () => {
+    menu.classList.remove("open");
   });
 });

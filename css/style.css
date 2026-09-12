@@ -36,7 +36,7 @@ main {
 }
 
 .container {
-    grid-column: 3 / 10;
+    grid-column: 3 / 11;
     margin: 128px 0 128px 0;
 }
 
@@ -57,7 +57,7 @@ a {
 
 .container a:hover {
     background: var(--color-sub);
-    width: 120%;
+    width: 112.5%;
 }
 
 small {
@@ -70,11 +70,33 @@ small {
     transition: all 0.5s ease;
 }
 
-.accordion {
-    position: absolute;
-    right: 100%;
+.hover-menu {
+  position: relative;
 }
 
-.accordion.open {
-    left: 100%;
+.accordion {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(-200px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s;
 }
+
+.hover-menu:hover .accordion {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(12.5%);
+}
+
