@@ -2,11 +2,43 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px),1fr));
     row-gap: 32px;
 }
 
 .gallery-item {
+    width: 100%;
     max-width: 300px;
+    padding: 8px;
 }
 
+.gallery-item>div {
+    background: var(--color-white);
+    box-shadow: 4px 4px 0 var(--color-main);
+}
+
+
+/* -------- card-001 -------- */
+.card-001-img,
+.card-001-img img {
+    width: 100%;
+    height: 150px;
+    background: var(--color-main);
+}
+
+.card-001-title {
+    padding: 8px 8px 0 8px;
+}
+
+.card-txt {
+    padding: 8px;
+}
+
+/* -------- card-002 -------- */
+/* -------- card-003 -------- */
+/* -------- card-004 -------- */
+/* -------- card-005 -------- */
+/* -------- card-006 -------- */
+/* -------- card-007 -------- */
+/* -------- card-008 -------- */
+/* -------- card-009 -------- */
