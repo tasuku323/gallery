@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 300px;
     padding: 8px;
+    max-height: 500px;
 }
 
 .gallery-item>div {
