@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.grid-item {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 32px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
