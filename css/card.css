@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    row-gap: 32px;
+}
+
+.gallery-item {
+    max-width: 300px;
+}
+

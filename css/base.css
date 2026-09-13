@@ -14,9 +14,19 @@
   --color-black: #000000;
 
   /*-------- フォント ----------*/
-
+  
   --font-ja: "Noto Sans JP", sans-serif;
   --font-en: "Inter", sans-serif;
+  
+  /*-------- フォントサイズ ----------*/
+
+:root {
+  --font-size-heading-l: clamp(3.6rem, 5vw, 6.4rem);
+  --font-size-heading-m: clamp(2.4rem, 3vw, 3.2rem);
+  --font-size-heading-s: clamp(2rem, 2vw, 2.4rem);
+}
+
+
 
   /*------------ レイアウト -------------*/
 
@@ -88,6 +98,33 @@ body {
       rgba(0, 0, 0, 0.08) 8.333%
     );
 }
+
+
+/* ------------- 共通クラス --------------- */
+
+.heading-l {
+  font-size: var(--font-size-heading-l);
+  font-weight: 700;
+  
+}
+
+.heading-m {
+  font-size: var(--font-size-heading-m);
+  font-weight: 600;
+}
+
+.heading-s {
+  font-size: var(--font-size-heading-s);
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
 
 
 /* --------------- 下層共通 -------------- */
