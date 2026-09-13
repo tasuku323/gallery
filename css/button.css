@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-.grid-item {
+.button-grid {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
     row-gap: 32px;
 }
 
-.button {
+.gallery-item {
     display: flex;
     align-items: center;
     justify-content: center;

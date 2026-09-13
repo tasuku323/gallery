@@ -8,8 +8,8 @@
   --color-text: #111;
   --color-base: #cfcfcf;
   --color-main: #1a4d8f;
-  --color-sub: #f30713;
-  --color-accent: #f532db;
+  --color-sub: #f532db;
+  --color-accent: #f30713;
   --color-white: #ffffff;
   --color-black: #000000;
 
@@ -62,11 +62,11 @@ a {
 
 /* ----------- hoverできる端末のみの設定 --------------- */
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   a:hover {
     opacity: 0.7;
   }
-}
+} */
 
 /* -------------- コピーライト --------------- */
 footer small {
@@ -126,11 +126,14 @@ footer {
   grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 
+
 .footer-nav ul li:first-child {
   grid-column: span 3;
 }
 
 .footer-nav a {
+  position: relative;
+  text-transform: uppercase;
   font-size: clamp(20px,3vw,48px);
   color: var(--color-text);
   text-align: center;
@@ -138,10 +141,38 @@ footer {
   border: 0.5px solid var(--color-text);
 }
 
+.footer-nav a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+}
+
+.footer-nav a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+
+  width: 8px;
+  height: 8px;
+
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
 .footer-nav a:hover {
   background: var(--color-sub);
   color: var(--color-base);
-  line-height: 3;
 }
 
 
@@ -153,4 +184,23 @@ footer {
 .footer-nav li:nth-child(2) a,
 .footer-nav li:nth-child(3) a {
   border-right: none;
+}
+
+@media (max-width: 767px) {
+  .footer-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav ul li:first-child {
+    grid-column: auto;
+  }
+
+  .footer-nav li:nth-child(2) a,
+  .footer-nav li:nth-child(3) a {
+    border-right: 0.5px solid var(--color-text);
+  }
+
+  .footer-nav li:not(:first-child) a {
+    border-top: none;
+  }
 }
