@@ -24,7 +24,7 @@
   --font-size-heading-l: clamp(3.6rem, 5vw, 6.4rem);
   --font-size-heading-m: clamp(2.4rem, 3vw, 3.2rem);
   --font-size-heading-s: clamp(2rem, 2vw, 2.4rem);
-
+  --font-size-heading-sub: 14px;
 
 
 
@@ -116,6 +116,12 @@ body {
 .heading-s {
   font-size: var(--font-size-heading-s);
   font-weight: 500;
+}
+
+.heading-sub {
+  font-size: var(--font-size-heading-sub);
+  font-weight: 400;
+  color: var(--color-accent);
 }
 
 
