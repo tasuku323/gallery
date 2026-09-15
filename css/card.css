@@ -20,19 +20,24 @@
 
 
 /* -------- card-001 -------- */
-.card-001-img,
-.card-001-img img {
-    width: 100%;
-    height: 150px;
-    background: var(--color-main);
+.card-001__image {
+  width: 100%;
+  height: 150px;
+  background: var(--color-main);
 }
 
-.card-001-title {
-    padding: 8px 8px 0 8px;
+.card-001__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card-txt {
-    padding: 8px;
+.card-001__title {
+  padding: 8px 8px 0;
+}
+
+.card-001__text {
+  padding: 8px;
 }
 
 /* -------- card-002 -------- */
