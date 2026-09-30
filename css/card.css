@@ -13,13 +13,15 @@
     max-height: 500px;
 }
 
-.gallery-item>div {
-    background: var(--color-white);
-    box-shadow: 4px 4px 0 var(--color-main);
-}
 
 
 /* -------- card-001 -------- */
+.card-001 {
+  background: var(--color-white);
+  box-shadow: 4px 4px 0 var(--color-main);
+  
+}
+
 .card-001__image {
   width: 100%;
   height: 150px;
@@ -41,6 +43,73 @@
 }
 
 /* -------- card-002 -------- */
+.card-002 {
+    width: 100%;
+    background: rgb(101, 158, 244);
+    padding: 16px;
+}
+
+.card-002__inner {
+    padding: 16px;
+    background: #eee;
+      --cut: 24px;
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut))
+  );
+}
+
+.card-002__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.card-002__image {
+    flex: 0 0 40%;
+    height: 96px;
+    background: #888;
+          --cut: 12px;
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut))
+  );
+}
+
+.card-002__heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-002 .heading-s {
+    font-size: 2rem;
+}
+
+.card-002__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-002__button {
+    display: block;
+    text-align: right;
+}
+
+
+
 /* -------- card-003 -------- */
 /* -------- card-004 -------- */
 /* -------- card-005 -------- */
