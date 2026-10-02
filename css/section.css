@@ -49,3 +49,122 @@
   }
 }
 /* ---------- section-002 ----------- */
+/* ---------- section-003 ----------- */
+/* ---------- section-004 ----------- */
+/* ---------- section-005 ----------- */
+/* ---------- section-006 ----------- */
+/* ---------- section-007 ----------- */
+.section-007 {
+  width: 100%;
+}
+
+.section-007__item {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0,2fr);
+  align-items: center;
+  gap: clamp(32px,6vw,80px);
+}
+
+.section-007__item + .section-007__item {
+  margin-top: clamp(80px, 12vw, 160px);
+}
+
+.section-007__visual {
+  position: relative;
+}
+
+.section-007__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.section-007__image img {
+  background-color: #777;
+  min-width: 100%;
+  min-height: 100%;
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover; */
+}
+
+.section-007__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-accent);
+  font-family: var(--font-en);
+  font-size: clamp(6rem,10vw,12rem);
+  font-weight: 700;
+  line-height: 1;
+  transform: translate(-20%, -40%);
+  z-index: 1;
+}
+
+.section-007__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: var(--color-main);
+  font-family: var(--font-en);
+  font-size: clamp(4rem,7vw,8rem);
+  font-weight: 600;
+  transform: translate(-20%, 50%);
+  transform-origin: center;
+}
+
+.section-007__content {
+  position: relative;
+  z-index: 2;
+}
+
+.section-007__title {
+  margin-bottom: var(--space-sm);
+}
+
+.section-007__text {
+  margin-bottom: var(--space-md);
+}
+
+.section-007__item--reverse .section-007__visual {
+  order: 2;
+}
+.section-007__item--reverse .section-007__content {
+  order: 1;
+}
+
+.section-007__item--reverse
+.section-007__number {
+  left: auto;
+  right: 0;
+
+  transform: translate(20%, -40%);
+}
+
+.section-007__item--reverse
+.section-007__label {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+
+  .section-007__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .section-007__item + .section-007__item {
+    margin-top: var(--space-xl);
+  }
+
+  .section-007__item--reverse
+  .section-007__visual,
+  .section-007__item--reverse
+  .section-007__content {
+    order: initial;
+  }
+
+  .section-007__number {
+    font-size: clamp(5rem, 20vw, 8rem);
+  }
+}
