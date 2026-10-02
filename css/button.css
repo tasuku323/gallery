@@ -82,6 +82,10 @@
     transition: var(--transition-base);
 }
 
+@media (hover: hover) {
 .button-003:hover {
     background-color: var(--color-main2);
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--color-main2);
+  }
 }
