@@ -3,7 +3,7 @@
 .button-grid {
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
-    row-gap: 32px;
+    gap: 32px;
 }
 
 .gallery-item {
@@ -15,52 +15,73 @@
 /* -------------- button-002 ----------------- */
 
 .button-002 {
-  position: relative;
+    position: relative;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: min(100%, 220px);
+    min-height: 52px;
+    padding: 12px 48px 12px 24px;
+    
+    color: var(--color-white);
+    background-color: var(--color-main);
+    background-image: linear-gradient(
+        var(--color-accent),
+        var(--color-accent)
+        );
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 0 100%;
+        border-radius: 100vmax;
+        transition: background-size var(--transition-base);
+    }
+    
+    .button-002::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 8px;
+        height: 8px;
+        
+        border-top: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        
+        transform:
+        translateY(-50%)
+        rotate(45deg);
+    }
+    
+    .button-002:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 3px;
+    }
+    
+    @media (hover: hover) {
+        .button-002:hover {
+            background-size: 100% 100%;
+        }
+    }
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
-  width: min(100%, 220px);
-  min-height: 52px;
-  padding: 12px 48px 12px 24px;
+    /* -------------- button-003 ----------------- */
 
-  color: var(--color-white);
-  background-color: var(--color-main);
-  background-image: linear-gradient(
-    var(--color-accent),
-    var(--color-accent)
-  );
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 0 100%;
-  border-radius: 100vmax;
-  transition: background-size var(--transition-base);
+.button-003 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 220px);
+    min-height: 52px;
+    padding: 16px;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 0 var(--color-main2);
+    transition: var(--transition-base);
 }
 
-.button-002::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  width: 8px;
-  height: 8px;
-
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-
-transform:
-  translateY(-50%)
-  rotate(45deg);
-}
-
-.button-002:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
-@media (hover: hover) {
-  .button-002:hover {
-    background-size: 100% 100%;
-  }
+.button-003:hover {
+    background-color: var(--color-main2);
 }
