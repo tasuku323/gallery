@@ -192,3 +192,42 @@
     font-size: clamp(5rem, 20vw, 8rem);
   }
 }
+
+
+/* ---------- Section / 002 : Figma prototype ---------- */
+.section-002 {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+  padding: 24px 0;
+}
+.section-002__heading {
+  margin-bottom: 28px;
+  font-size: var(--font-size-heading-m);
+  font-weight: 700;
+}
+.section-002__lead {
+  margin: -14px 0 32px;
+  font-size: 1.5rem;
+}
+.section-002__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(16px, 2.5vw, 36px);
+}
+.section-002__cards .card-010 {
+  width: 100%;
+  min-height: 340px;
+}
+@media (max-width: 900px) {
+  .section-002__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .section-002__cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .section-002__cards .card-010 { max-width: 360px; }
+}
