@@ -6,20 +6,20 @@
     gap: 64px;
 }
 
-.gallery-item {
+.section-grid > .gallery-item {
     width: 100%;
     max-width: 1000px;
     padding: 16px;
 }
-.gallery-item:nth-child(odd) {
+.section-grid > .gallery-item:nth-child(odd) {
     justify-self: start;
 }
-.gallery-item:nth-child(even) {
+.section-grid > .gallery-item:nth-child(even) {
     justify-self: end;
 }
 @media (max-width: 767px) {
 
-  .gallery-item {
+  .section-grid > .gallery-item {
     max-width: none;
     justify-self: stretch;
   }
