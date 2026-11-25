@@ -119,3 +119,54 @@
 /* -------- card-007 -------- */
 /* -------- card-008 -------- */
 /* -------- card-009 -------- */
+
+
+/* ---------- Card / 010 : Figma prototype ---------- */
+.card-010 {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 277px);
+  min-height: 340px;
+  margin-inline: auto;
+  background: var(--color-white);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 8%);
+  overflow: hidden;
+}
+.card-010__visual {
+  position: relative;
+  min-height: 128px;
+  background: linear-gradient(135deg, var(--color-main) 0%, var(--color-main2) 100%);
+}
+.card-010__visual::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: -1px;
+  width: 54px;
+  height: 54px;
+  background: var(--color-white);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.card-010__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 12px 12px;
+}
+.card-010__number {
+  color: var(--color-main);
+  font-family: var(--font-en);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card-010__title {
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.card-010__button {
+  width: 100%;
+  min-height: 81px;
+  margin-top: auto;
+}
