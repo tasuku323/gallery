@@ -6,7 +6,7 @@
     gap: 32px;
 }
 
-.gallery-item {
+.button-grid > .gallery-item {
     display: flex;
     align-items: center;
     justify-content: center;
